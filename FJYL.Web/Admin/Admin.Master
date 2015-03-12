@@ -1,0 +1,24 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="FJYL.Web.Admin.Admin" %>
+
+<!DOCTYPE html>
+<html>
+    <head runat="server">
+        <title>后台管理</title>
+        <asp:ContentPlaceHolder ID="head" runat="server">
+        </asp:ContentPlaceHolder>
+    </head>
+    <body>
+        <form id="form1" runat="server">
+        <div>
+            <div><a href="/admin/about">关于我们</a></div>
+            <div><a href="/admin/case">成功案例</a></div>
+            <div><a href="/admin/contact">联系我们</a></div>
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+        
+            </asp:ContentPlaceHolder>
+        </div>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+html {margin:0;padding:0;border:0;}
+body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, dialog, figure, footer, header, hgroup, nav, section {margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+article, aside, details, figcaption, figure, dialog, footer, header, hgroup, menu, nav, section {display:block;}
+body {padding:0; margin:0;font-family: "microsoft Yahei" !important;}
+#header{ background: #fff; box-shadow: 0 3px 9px 0 rgba(64, 63, 64, 0.3); min-height: 90px; position: fixed; top:0; height: 90px; display: block; width: 100%; z-index: 10000;}
+#header .wrap{ width: 1200px; margin:0 auto;}
+#header .wrap a.logo{ display: block; float: left; width: 250px; height: 80px; margin-top: 5px;}
+#header .wrap ul.menu{ float: right; height: 80px; line-height: 80px; margin-top: 5px;}
+#header .wrap ul.menu li{ float: left; list-style: none;}
+#header .wrap ul.menu li a{ color: #333; text-decoration: none; padding:6px 18px;}
+#header .wrap ul.menu li a.active{ background: #429839;border-radius:3px; text-align: center; color: #fff;}
+#sildeshow{ width: 100%; height: auto;}
+#sildeshow img{ width: 100%;}
+#content{ width: 1200px; margin:0 auto;}
+#content h1{ text-align: center; font-size: 40px; color: #000; font-weight: bold; margin-top: 50px;}
+#content p.depict{ font-size: 16px;padding-top: 10px; color: #666;}
+#content .feature{ padding-top: 50px;}
+#content .feature .col4{width: 22%; float: left; padding:10px;}
+#content .feature .col4 h2{ font-size: 30px; text-align: center;}
+#content .feature .col4 .icon-pencil{background-color:rgba(0, 0, 0, 0);border-color: #76D898;border-radius: 100px 100px 100px 100px; width: 99px; height: 99px;border-width: 5px;border-style: solid; margin:0 auto;margin-top:20px; font-size: 16px;}
+#content .feature .col4 p{ margin-top: 40px; color: #666;}
+#footer{ height: 120px; background: #333; color: #fff; width: 100%; padding-top:40px; margin-top: 50px;}
+#footer p{ margin-top: 10px; text-align: center;}
+.clear{ clear: both;}
