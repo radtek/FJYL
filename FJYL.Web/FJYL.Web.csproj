@@ -67,6 +67,22 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin\AdminContent\css\reset.css" />
+    <Content Include="Admin\AdminContent\images\buttons_left.png" />
+    <Content Include="Admin\AdminContent\images\buttons_right.png" />
+    <Content Include="Admin\AdminContent\images\footer_bg.png" />
+    <Content Include="Admin\AdminContent\images\footer_bl.png" />
+    <Content Include="Admin\AdminContent\images\footer_br.png" />
+    <Content Include="Admin\AdminContent\images\input_bg.png" />
+    <Content Include="Admin\AdminContent\images\menu.png" />
+    <Content Include="Admin\AdminContent\images\menu_arrow.png" />
+    <Content Include="Admin\AdminContent\images\menu_tl.png" />
+    <Content Include="Admin\AdminContent\images\menu_tr.png" />
+    <Content Include="Admin\AdminContent\scripts\admin.js" />
+    <Content Include="Admin\Login.aspx" />
+    <Content Include="Admin\AdminContent\css\style.css" />
+    <Content Include="Admin\AdminContent\images\icons_gray.png" />
+    <Content Include="Admin\Welcome.aspx" />
     <Content Include="packages.config" />
     <Content Include="Admin\Admin.Master" />
     <Content Include="scripts\UEditor\net\config.json" />
@@ -86,7 +102,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Admin\Content.aspx" />
-    <Content Include="App_Data\AppConfig.txt" />
+    <None Include="App_Data\users.json" />
     <Content Include="about.html" />
     <Content Include="case.html" />
     <Content Include="job.html" />
@@ -291,12 +307,30 @@
     <Compile Include="Admin\Content.aspx.designer.cs">
       <DependentUpon>Content.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Welcome.aspx.cs">
+      <DependentUpon>Welcome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Welcome.aspx.designer.cs">
+      <DependentUpon>Welcome.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Common\HtmlUtil.cs" />
+    <Compile Include="Common\JsonUtil.cs" />
+    <Compile Include="Common\UserManager.cs" />
+    <Compile Include="Common\WebUtil.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="scripts\UEditor\net\App_Code\Config.cs" />
     <Compile Include="scripts\UEditor\net\App_Code\ConfigHandler.cs" />

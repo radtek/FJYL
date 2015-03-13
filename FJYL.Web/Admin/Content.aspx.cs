@@ -16,6 +16,8 @@ namespace FJYL.Web.Admin
         private const string Replace_End = "<!--ReplaceEnd-->";
         private const string Replace_Pattern = Replace_Start + @"[\s\S]*" + Replace_End;
 
+        private string[] PageNames = new string[] { "about", "case", "job", "contact" };
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
@@ -49,7 +51,7 @@ namespace FJYL.Web.Admin
         private string GetPageName()
         {
             var segments = Request.GetFriendlyUrlSegments();
-            var pageName = segments.Count > 0 ? segments[0] : "";
+            var pageName = segments.Count > 0 ? segments[0] : PageNames[0];
 
             return pageName;
         }

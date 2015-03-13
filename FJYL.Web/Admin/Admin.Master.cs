@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FJYL.Web.Common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,20 @@ namespace FJYL.Web.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!Page.IsPostBack)
+            {
+                if (!Request.IsAuthenticated)
+                {
+                    Response.Redirect("~/admin/login");
+                    return;
+                }
+            }
+        }
 
+        protected void lnkbtnLogout_Click(object sender, EventArgs e)
+        {
+            UserManager.SignOut();
+            Response.Redirect("~/admin/login");
         }
     }
 }
