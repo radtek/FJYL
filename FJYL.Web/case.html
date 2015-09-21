@@ -2,32 +2,80 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>AiYi page</title>
+    <title>富景园林</title>
     <link href="css/aiyi.css" rel="stylesheet" type="text/css" />
-    <script type='text/javascript' src='js/jquery-1.8.3.min.js'></script>
-    <script type='text/javascript' src='js/aiyi.js'></script>
+    <link href="css/slider.css" rel="stylesheet" type="text/css" />
+    <link href="css/lightbox.css" rel="stylesheet" type="text/css" />
+    <script type='text/javascript' src='/scripts/aiyi.js'></script>
+    <script type='text/javascript' src='/scripts/lightbox.min.js'></script>
 </head>
 <body>
     <div id="header">
         <div class="wrap">
-            <a href="/" class="logo"><img src="img/logo.png" alt="logo" /></a>
+            <a href="/" class="logo"><img src="/img/logo.png" alt="logo" /></a>
             <ul class="menu">
-                <li><a href="#" class="active">首页</a></li>
-                <li><a href="#">关于我们</a></li>
-                <li><a href="#">成功案例</a></li>
-                <li><a href="#">招聘信息</a></li>
-                <li><a href="#">联系我们</a></li>
+                <li class="first"><a href="/">首页</a></li>
+                <li><a href="/about.html">公司简介</a></li>
+                <li><a href="/case.html" class="active">成功案例</a></li>
+                <li><a href="/job.html">招聘信息</a></li>
+                <li><a href="/contact.html">联系我们</a></li>
             </ul>
         </div>
     </div>
-    <div id="sildeshow">
-        <img src="img/slide1.jpg" alt="" />
+    <div class="clear"></div>
+    <div class="subpage_nav">
+        <div class="contentZ">
+            <img src="/img/marqueeico.jpg" style="margin-top:10px;float:left;" />
+            <p>富景园林秉承"服务最佳、质量最好"的理念，竭诚为您服务，欢迎前来合作洽谈。</p>
+        </div>
     </div>
-    <div id="content">
-        <!--ReplaceStart--><h1 style="font-size: 32px; font-weight: bold; border-bottom: 2px solid rgb(204, 204, 204); padding: 0px 4px 0px 0px; text-align: center; margin: 0px 0px 20px;" label="标题居中">联系我们<br/></h1><p>FJ 园林<br/></p><!--ReplaceEnd-->
+
+    <!--ReplaceStart-->
+    <div id="content" style="width:1030px;font-size:14px;">
+        <div class="flPanel">
+            <div class="subcontact">
+                <div class="contacttit">
+                    <div class="titlename1">联系我们</div>
+                    <div class="contactcon2">
+                        <p>地址：大连开发区本溪东街新日里2#</p>
+                        <p>工程洽谈： 18041175567</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="frPanel">
+            <div class="righttitle"><div class="titlename1">成功案例</div></div>
+            <div class="lightBoxWrap">
+                <div class="image-row">
+                    <div class="image-set">
+                        <a class="example-image-link" href="/img/anli/aa.jpg" data-lightbox="example-set" data-title="大连民族大学绿化工程"><img class="example-image" src="/img/anli/a.jpg" alt="" /><div>大连民族大学绿化工程</div></a>
+                        <a class="example-image-link" href="/img/anli/bb.jpg" data-lightbox="example-set" data-title="名仕智慧谷园林景观">
+                            <img class="example-image" src="/img/anli/b.jpg" alt="" />
+                            <div>名仕智慧谷园林景观</div>
+                        </a>
+                        <a class="example-image-link" href="/img/anli/cc.jpg" data-lightbox="example-set" data-title="南岔沟卢总别墅效果图"><img class="example-image" src="/img/anli/c.jpg" alt="" /><div>南岔沟卢总别墅效果图</div></a>
+                        <a class="example-image-link" href="/img/anli/dd.jpg" data-lightbox="example-set" data-title="鲅鱼圈秀山铭城景观方案"><img class="example-image" src="/img/anli/d.jpg" alt="" /><div>鲅鱼圈秀山铭城景观方案</div></a>
+                        <a class="example-image-link" href="/img/anli/ee.jpg" data-lightbox="example-set" data-title="壹高美郡小区">
+                            <img class="example-image" src="/img/anli/e.jpg" alt="" />
+                            <div>壹高美郡小区</div>
+                        </a>
+                        <a class="example-image-link" href="/img/anli/ff.jpg" data-lightbox="example-set" data-title="北府名苑"><img class="example-image" src="/img/anli/f.jpg" alt="" /><div>北府名苑</div></a>
+                        <a class="example-image-link" href="/img/anli/gg.jpg" data-lightbox="example-set" data-title="大连龙门旅游度假区某私人会所"><img class="example-image" src="/img/anli/g.jpg" alt="" /><div>大连龙门旅游度假区某私人会所</div></a>
+                        <a class="example-image-link" href="/img/anli/hh.jpg" data-lightbox="example-set" data-title="开发区佳能厂区职工宿舍区绿化"><img class="example-image" src="/img/anli/h.jpg" alt="" /><div>开发区佳能厂区职工宿舍区绿化</div></a>
+                        <a class="example-image-link" href="/img/anli/ii.jpg" data-lightbox="example-set" data-title="蓝湾吕总别墅庭院设计施工"><img class="example-image" src="/img/anli/i.jpg" alt="" /><div>蓝湾吕总别墅庭院设计施工</div></a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <!--ReplaceEnd-->
+
+    <div class="clear"></div>
     <div id="footer">
-        <p> aiyi@2015</p>
-    </div>
+        <p>富景园林 版权所有 Copyright © 2010-2015 </p>
+        <p>联系地址：大连开发区本溪东街新日里2#</p>
+        <p>工程洽谈： 18041175567 设计咨询： 13898688531 传真电话：(0411)87650986 </p>
+        <p>公司网址： DLFJYLJG.COM 电子邮箱：FJYL2007@163.COM 公司业务QQ:2629631831</p>
+    </div> 
 </body>
 </html>
