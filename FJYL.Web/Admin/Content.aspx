@@ -1,6 +1,8 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Admin/Admin.Master" AutoEventWireup="true" CodeBehind="Content.aspx.cs" Inherits="FJYL.Web.Admin.Content" ValidateRequest="false" %>
 
 <asp:Content ID="HeadContent" ContentPlaceHolderID="head" runat="server">
+    <%--<script src="http://localhost:53527/scripts/aiyi.js"></script>--%>
+    <link href="http://localhost:53527/css/aiyi.css" rel="stylesheet" />
 </asp:Content>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
@@ -17,6 +19,5 @@
         window.UEDITOR_HOME_URL = '/Scripts/UEditor/';
         var ue = UE.getEditor('<%=txtContent.ClientID%>');
     </script>
-
 </asp:Content>
 

@@ -4,21 +4,114 @@ article, aside, details, figcaption, figure, dialog, footer, header, hgroup, men
 body {padding:0; margin:0;font-family: "microsoft Yahei" !important;}
 #header{ background: #fff; box-shadow: 0 3px 9px 0 rgba(64, 63, 64, 0.3); min-height: 90px; position: fixed; top:0; height: 90px; display: block; width: 100%; z-index: 10000;}
 #header .wrap{ width: 1200px; margin:0 auto;}
-#header .wrap a.logo{ display: block; float: left; width: 250px; height: 80px; margin-top: 5px;}
-#header .wrap ul.menu{ float: right; height: 80px; line-height: 80px; margin-top: 5px;}
-#header .wrap ul.menu li{ float: left; list-style: none;}
-#header .wrap ul.menu li a{ color: #333; text-decoration: none; padding:6px 18px;}
-#header .wrap ul.menu li a.active{ background: #429839;border-radius:3px; text-align: center; color: #fff;}
+#header .wrap a.logo{ display: block; float: left; width: 250px; height: 80px; margin-top: 10px;margin-left: 20px;}
+#header .wrap ul.menu{ margin-top: -2px;margin-left: 454px;}
+#header .wrap ul.menu li{ float: left; list-style: none;margin-top: 44px;}
+#header .wrap ul.menu li.first{margin-left: 136px;}
+#header .wrap ul.menu li a{ color: #fff; text-decoration: none; padding:6px 25px; font-size: 14px; font-weight: bold;}
 #sildeshow{ width: 100%; height: auto;}
+#header .wrap ul.menu li a:hover{
+    background: #63b32b; border-radius: 6px;
+}
 #sildeshow img{ width: 100%;}
 #content{ width: 1200px; margin:0 auto;}
-#content h1{ text-align: center; font-size: 40px; color: #000; font-weight: bold; margin-top: 50px;}
+#content h1{ text-align: center; font-size: 40px; color: #000; font-weight: bold; margin-top: 20px; height: 50px;}
 #content p.depict{ font-size: 16px;padding-top: 10px; color: #666;}
 #content .feature{ padding-top: 50px;}
-#content .feature .col4{width: 22%; float: left; padding:10px;}
-#content .feature .col4 h2{ font-size: 30px; text-align: center;}
-#content .feature .col4 .icon-pencil{background-color:rgba(0, 0, 0, 0);border-color: #76D898;border-radius: 100px 100px 100px 100px; width: 99px; height: 99px;border-width: 5px;border-style: solid; margin:0 auto;margin-top:20px; font-size: 16px;}
-#content .feature .col4 p{ margin-top: 40px; color: #666;}
-#footer{ height: 120px; background: #333; color: #fff; width: 100%; padding-top:40px; margin-top: 50px;}
+#content .feature .col3{width: 22%;position:relative;float: left;padding:10px 10px 40px;border-radius: 5px 5px 5px 5px;margin-right: 10px; text-align:center; width: 30%;}
+#content .feature .col3 h2{ font-size: 30px; text-align: center;}
+#content .feature .col3 .icon-pencil{border-style: solid; margin:0 auto;margin-top:20px; font-size: 16px;}
+#content .feature .col3 .icon-pencil:hover{ opacity: 0.7}
+#content .feature .col3 p{ margin-top: 12px; color: #666; font-size: 14px; margin: 10px auto 0; width: 263px;}
+#footer{ height: 120px; background: #333; color: #fff; width: 100%; padding-top:20px; margin-top: 50px; padding-bottom: 20px;}
 #footer p{ margin-top: 10px; text-align: center;}
+p{
+    font-size: 14px;
+}
 .clear{ clear: both;}
+#content .feature .col3 a{
+    position: absolute;
+    right: 63px;
+    bottom: 8px;
+    color: #fff;
+    text-decoration: none;
+    background: #608e09;
+    padding: 0px 8px;
+    border-radius: 5px;
+}
+.menu{
+    height: 80px!important;
+	background:url(../img/bar.png) no-repeat;
+}
+/*#content .feature .col3:hover{
+    background: #f2f2f2;
+    box-shadow: 0 0 15px #999;
+}*/
+.subpage_nav{
+    margin-top:90px;
+    width: 100%;
+    height: 48px;
+    background:url(../img/marqueebg.jpg) repeat-x;
+}
+.contentZ{
+    width: 1000px;
+    margin: 0 auto;
+    height: 48px;
+    line-height: 48px;
+}
+.contentZ p{
+    color: #95ff8a;
+    margin-left: 30px;
+    font-size: 13px;
+    padding-left: 10px;
+}
+.flPanel{
+    width: 275px;
+    float: left;
+}
+.frPanel{
+    width: 710px;
+    float: left;
+    margin-top: 20px;
+    margin-left: 15px;
+}
+.frPanel p {
+    line-height: 25px;
+}
+.subcontact{
+    width: 273px;
+    margin: 20px 0;
+}
+.contacttit{
+    width: 273px;
+background: url(../img/contacttitle.jpg) no-repeat 0 0;
+height: 39px;
+line-height: 39px;
+}
+.titlename1{
+width: 130px;
+text-align: center;
+font: 600 16px/38px 微软雅黑;
+color: #fff;
+}
+.contactcon2 {
+width: 251px;
+background: #ecffeb;
+border-bottom: 1px solid #95d28e;
+border-left: 1px solid #95d28e;
+border-right: 1px solid #95d28e;
+padding-bottom: 15px;
+padding: 10px;
+}
+.righttitle{
+    width: 100%;
+height: 38px;
+line-height: 38px;
+background: url(../img/righttitle.jpg) 0 0 no-repeat;
+}
+
+.image-set a{
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+}

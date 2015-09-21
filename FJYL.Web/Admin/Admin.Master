@@ -40,7 +40,7 @@
 						<div id="right"></div>
 						<ul>
 							<li>
-                                <a href="/admin/content/about"><span>关于我们</span></a>
+                                <a href="/admin/content/about"><span>公司简介</span></a>
 							</li>
 							<li>
 								<a href="/admin/content/case"><span>成功案例</span></a>
@@ -75,7 +75,7 @@
 			</div>
 		</div>
 		<div id="footer">
-			<p class="last">Copyright <%=DateTime.Now.Year %>  - Fj园林</p>
+			<p class="last">Copyright <%=DateTime.Now.Year %>  - 富景园林</p>
 		</div>
         </form>
         <script type="text/javascript">
