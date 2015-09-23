@@ -29,6 +29,8 @@ namespace FJYL.Web.Admin
             var isAuthenticate = UserManager.SignIn(username, password);
             if (isAuthenticate)
             {
+                Session["IsAuthorized"] = true;
+
                 Response.Redirect("/admin/welcome", true);
             }
             else

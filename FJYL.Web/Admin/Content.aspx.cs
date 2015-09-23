@@ -20,10 +20,16 @@ namespace FJYL.Web.Admin
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["IsAuthorized"] == null)
+            {
+                Response.Redirect("/admin/login");
+            }
+
             if (!Page.IsPostBack)
             {
                 LoadContent();
             }
+            //ScriptManager.GetCurrent(Page).RegisterAsyncPostBackControl(lnkbtnSave);
         }
 
         protected void lnkbtnSave_Click(object sender, EventArgs e)
@@ -31,6 +37,12 @@ namespace FJYL.Web.Admin
             var content = HttpUtility.HtmlDecode(txtContent.Text);
 
             GenerateHtml(content);
+
+            WebUtil.RegisterStartupScript(this.Page, "alert('保存成功！');", true);
+
+            //var pageName = GetPageName();
+            //var pagePath = GetPagePath(pageName);
+            //Response.Redirect(pagePath, true);
         }
 
         #region Private Mothod

@@ -214,4 +214,4 @@ body:after {
 .image-set{ margin-top: 30px; text-align: center;}
 .image-set a{ display: inline-block; padding:4px; border-radius: 5px;}
 .image-set a img{border-radius: 5px;}
-.image-set a.example-image-link:hover{ background: #44aaee;};
+.image-set a.example-image-link:hover{ background: #44aaee;}

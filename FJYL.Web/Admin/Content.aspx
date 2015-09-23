@@ -1,23 +1,22 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Admin/Admin.Master" AutoEventWireup="true" CodeBehind="Content.aspx.cs" Inherits="FJYL.Web.Admin.Content" ValidateRequest="false" %>
+<%@ Import Namespace="System.Web.Optimization" %>
 
 <asp:Content ID="HeadContent" ContentPlaceHolderID="head" runat="server">
-    <%--<script src="http://localhost:53527/scripts/aiyi.js"></script>--%>
-    <link href="http://localhost:53527/css/aiyi.css" rel="stylesheet" />
+    <%: Scripts.Render("~/scripts/ckeditor/ckeditor.js") %>
 </asp:Content>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <div>
         <p>
-            <asp:TextBox runat="server" ID="txtContent" TextMode="MultiLine" Width="100%" Height="600"></asp:TextBox>
+            <asp:TextBox runat="server" ID="txtContent" TextMode="MultiLine" Width="1000" Height="600" class="ckeditor"></asp:TextBox>
         </p>
     </div>
-    <div>
-        <asp:LinkButton runat="server" ID="lnkbtnSave" OnClick="lnkbtnSave_Click">提交</asp:LinkButton>
+    <div style="padding-left:500px;">
+        <asp:LinkButton runat="server" ID="lnkbtnSave" OnClick="lnkbtnSave_Click" CssClass="button"><span> 提 交 </span></asp:LinkButton>
     </div>
 
     <script type="text/javascript">
-        window.UEDITOR_HOME_URL = '/Scripts/UEditor/';
-        var ue = UE.getEditor('<%=txtContent.ClientID%>');
+        CKEDITOR.replace('<%=txtContent.ClientID%>', { height: 800 });
     </script>
 </asp:Content>
 

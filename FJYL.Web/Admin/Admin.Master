@@ -5,10 +5,7 @@
 <html>
     <head runat="server">
         <title>后台管理</title>
-        <%: Scripts.Render("~/scripts/jquery-1.8.3.min.js") %>
-        <%: Scripts.Render("~/scripts/UEditor/ueditor.config.js") %>
-        <%: Scripts.Render("~/scripts/UEditor/ueditor.all.min.js") %>
-        
+        <%: Scripts.Render("~/scripts/jquery-1.8.3.min.js") %>        
         <%: Scripts.Render("~/admin/adminContent/scripts/admin.js") %>
         <%: Styles.Render("~/Admin/AdminContent/css/style.css") %>
         <asp:ContentPlaceHolder ID="head" runat="server">
@@ -17,66 +14,68 @@
     <body>
         <form id="form1" runat="server">
         <asp:scriptmanager runat="server"></asp:scriptmanager>
-        <div id="header">
-			<div class="col w5 bottomlast">
-				<a href="javascript:;" class="logo">
-					<img src="/img/logo.png" alt="Logo"  height="50"/>
-				</a>
-			</div>
-			<div class="col w5 last right bottomlast">
-				<p class="last">
-                    <span class="strong"><%=Page.User.Identity.Name %>,</span> 
-                    <asp:LinkButton runat="server" ID="lnkbtnLogout" OnClick="lnkbtnLogout_Click">退出</asp:LinkButton>
-				</p>
-			</div>
-			<div class="clear"></div>
-		</div>
+        <div style="width:1050px; margin: 0 auto;">            
+            <div id="header">
+			    <div class="col w5 bottomlast">
+				    <a href="javascript:;" class="logo">
+					    <img src="/img/logo.png" alt="Logo"  height="50"/>
+				    </a>
+			    </div>
+			    <div class="col w5 last right bottomlast">
+				    <p class="last">
+                        <span class="strong"><%=Page.User.Identity.Name %>,</span> 
+                        <asp:LinkButton runat="server" ID="lnkbtnLogout" OnClick="lnkbtnLogout_Click">退出</asp:LinkButton>
+				    </p>
+			    </div>
+			    <div class="clear"></div>
+		    </div>
 
-        <div id="wrapper">
-			<div id="minwidth">
-				<div id="holder">
-					<div id="menu">
-						<div id="left"></div>
-						<div id="right"></div>
-						<ul>
-							<li>
-                                <a href="/admin/content/about"><span>公司简介</span></a>
-							</li>
-							<li>
-								<a href="/admin/content/case"><span>成功案例</span></a>
-							</li>
-							<li>
-								<a href="/admin/content/job"><span>招聘信息</span></a>
-							</li>
-							<li>
-								<a href="/admin/content/contact"><span>联系我们</span></a>
-							</li>
-						</ul>
-						<div class="clear"></div>
-					</div>
+            <div id="wrapper">
+			    <div id="minwidth">
+				    <div id="holder">
+					    <div id="menu">
+						    <div id="left"></div>
+						    <div id="right"></div>
+						    <ul>
+							    <li>
+                                    <a href="/admin/content/about"><span>公司简介</span></a>
+							    </li>
+							    <li>
+								    <a href="/admin/content/case"><span>成功案例</span></a>
+							    </li>
+							    <li>
+								    <a href="/admin/content/job"><span>招聘信息</span></a>
+							    </li>
+							    <li>
+								    <a href="/admin/content/contact"><span>联系我们</span></a>
+							    </li>
+						    </ul>
+						    <div class="clear"></div>
+					    </div>
 
-                    <div id="desc">
-						<div class="body">
-							<div class="clear"></div>
-							<div id="html" class="help">
-							    <div class="col w10 last">
-								    <div class="content" align="center">
-									    <asp:ContentPlaceHolder ID="MainContent" runat="server">
-        
-                                        </asp:ContentPlaceHolder>									
-								    </div>
-							    </div>
+                        <div id="desc">
+						    <div class="body">
 							    <div class="clear"></div>
-							</div>
-						</div>
-						<div class="clear"></div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div id="footer">
-			<p class="last">Copyright <%=DateTime.Now.Year %>  - 富景园林</p>
-		</div>
+							    <div id="html" class="help">
+							        <div class="col w10 last">
+								        <div class="content" align="center">
+									        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+        
+                                            </asp:ContentPlaceHolder>									
+								        </div>
+							        </div>
+							        <div class="clear"></div>
+							    </div>
+						    </div>
+						    <div class="clear"></div>
+					    </div>
+				    </div>
+			    </div>
+		    </div>
+		    <div id="footer">
+			    <p class="last">Copyright <%=DateTime.Now.Year %>  - 富景园林</p>
+		    </div>
+        </div>
         </form>
         <script type="text/javascript">
             $(function () {
