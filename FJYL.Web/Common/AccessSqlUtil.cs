@@ -8,13 +8,11 @@ using System.Web.Script.Serialization;
 
 namespace FJYL.Web.DbManager
 {
-    public static class JsonUtil
+    public static class AccessSqlUtil
     {
-        public static T GetJsonData<T>(string fileName)
+        public static string GetStringValue(string val)
         {
-            var json = File.ReadAllText(fileName);
-
-            return new JavaScriptSerializer().Deserialize<T>(json);
+            return val != null ? val : string.Empty;
         }
     }
 }

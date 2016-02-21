@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 
-namespace FJYL.Web.Common
+namespace FJYL.Web.DbManager
 {
     public static class WebUtil
     {

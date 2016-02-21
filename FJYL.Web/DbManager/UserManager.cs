@@ -7,7 +7,7 @@ using System.Web;
 using System.Web.Configuration;
 using System.Web.Security;
 
-namespace FJYL.Web.Common
+namespace FJYL.Web.DbManager
 {
     public static class UserManager
     {

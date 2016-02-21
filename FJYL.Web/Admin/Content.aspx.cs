@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Microsoft.AspNet.FriendlyUrls;
-using FJYL.Web.Common;
+using FJYL.Web.DbManager;
 using System.Text.RegularExpressions;
 
 namespace FJYL.Web.Admin

@@ -31,93 +31,87 @@
             <p>富景园林秉承"服务最佳、质量最好"的理念，竭诚为您服务，欢迎前来合作洽谈。</p>
         </div>
     </div>
-
-    <!--ReplaceStart--> 
-    <div id="content" style="width:1030px;font-size:14px;">
+    <!--ReplaceStart-->
+    <div id="content" style="width:1030px;font-size:14px;">        
         <div class="flPanel">
             <div class="subcontact">
                 <div class="contacttit">
                     <div class="titlename1">联系我们</div>
-
                     <div class="contactcon2">
                         <p>地址：大连开发区本溪东街新日里2#</p>
-
                         <p>工程洽谈： 18041175567</p>
                     </div>
                 </div>
             </div>
         </div>
-
         <div class="frPanel">
-            <div class="righttitle">
-                <div class="titlename1">联系方式</div>
+            <div class="righttitle"><div class="titlename1">留言板</div></div>
+            <div class="field">
+                <label for="">您的姓名:</label>
+                <input type="text" id="yourName" />
             </div>
-
-            <p style="margin-bottom:10px;margin-top:30px;">联系地址：大连开发区本溪东街新日里2#</p>
-
-            <p style="margin-bottom:10px;">工程洽谈： 18041175567</p>
-
-            <p style="margin-bottom:10px;">公司网址： DLFJYLJG.COM</p>
-
-            <p style="margin-bottom:10px;">电子邮箱：FJYL2007@163.COM</p>
-
-            <p style="margin-bottom:10px;">公司业务QQ:2629631831</p>
-
-            <div style="width:620px;height:550px;border:#ccc solid 1px;" id="dituContent"></div>
+            <div class="field">
+                <label for="">您的主页:</label>
+                <input type="text" id="yourHomepage" />
+            </div>
+            <div class="field">
+                <label for="">您的QQ:</label>
+                <input type="text" id="yourQQ" />
+            </div>
+            <div class="field">
+                <label for="">您的联系方式:</label>
+                <input type="text" id="yourPhone" />
+            </div>
+            <div class="field">
+                <label for="">留言内容:</label>
+                <textarea id="yourMessage" cols="30" rows="10"></textarea>
+                <div class="buttonrow">
+                    <a href="javascript:;" id="btnSave">提交</a>
+                    <!--<a href="javascript:;">取消</a>-->
+                </div>
+            </div>
         </div>
-    </div>
- 
- <!--ReplaceEnd-->
-    
+    </div>    
+    <!--ReplaceEnd-->
+
     <div class="clear"></div>
     <div id="footer">
         <p>富景园林 版权所有 Copyright © 2010-2015 </p>
         <p>联系地址：大连开发区本溪东街新日里2#</p>
         <p>工程洽谈： 18041175567 设计咨询： 13898688531 传真电话：(0411)87650986 </p>
         <p>公司网址： DLFJYLJG.COM 电子邮箱：FJYL2007@163.COM 公司业务QQ:2629631831</p>
-    </div>
+    </div> 
 
-    <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
     <script type="text/javascript">
-    //创建和初始化地图函数：
-    function initMap() {
-        createMap();//创建地图
-        setMapEvent();//设置地图事件
-        addMapControl();//向地图添加控件
-    }
+        $(function () {
+            $("#yourName").focus();
 
-    //创建地图函数：
-    function createMap() {
-        var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
-        var point = new BMap.Point(121.787826, 39.052998);//定义一个中心点坐标
-        map.centerAndZoom(point, 17);//设定地图的中心点和坐标并将地图显示在地图容器中
-        window.map = map;//将map变量存储在全局
-    }
+            $("#btnSave").click(function () {
+                SaveMessage();
+            })
 
-    //地图事件设置函数：
-    function setMapEvent() {
-        map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
-        map.enableScrollWheelZoom();//启用地图滚轮放大缩小
-        map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
-        map.enableKeyboard();//启用键盘上下左右键移动地图
-    }
+            function SaveMessage() {
+                var name = $("#yourName").val();
+                if (name == '') { alert("请输入您的姓名"); return; }
+                var phone = $("#yourPhone").val();
+                if (phone == '') { alert("请输入您的联系方式"); return; }
+                var message = $("#yourMessage").val();
+                if (message == '') { alert("请输入留言内容"); return; }
 
-    //地图控件添加函数：
-    function addMapControl() {
-        //向地图中添加缩放控件
-        var ctrl_nav = new BMap.NavigationControl({ anchor: BMAP_ANCHOR_TOP_LEFT, type: BMAP_NAVIGATION_CONTROL_LARGE });
-        map.addControl(ctrl_nav);
-        //向地图中添加缩略图控件
-        var ctrl_ove = new BMap.OverviewMapControl({ anchor: BMAP_ANCHOR_BOTTOM_RIGHT, isOpen: 1 });
-        map.addControl(ctrl_ove);
-        //向地图中添加比例尺控件
-        var ctrl_sca = new BMap.ScaleControl({ anchor: BMAP_ANCHOR_BOTTOM_LEFT });
-        map.addControl(ctrl_sca);
-    }
+                var homepage = $("#yourHomepage").val();
+                var qq = $("#yourQQ").val();
+                var message = $("#yourMessage").val();
 
-
-    initMap();//创建和初始化地图
+                $.post("/api/MessageBoard/Save", { Name: name, Phone: phone, Message: message, Homepage: homepage, QQ: qq }, function (res) {
+                    console.log(res);
+                    if (res.Success) {
+                        alert("留言成功!");
+                    } else {
+                        alert("留言失败! \r\n" + res.Message);
+                    }
+                })
+            }
+        })
     </script>
 </body>
-
 </html>

@@ -1,4 +1,4 @@
-﻿using FJYL.Web.Common;
+﻿using FJYL.Web.DbManager;
 using System;
 using System.Collections.Generic;
 using System.Linq;
